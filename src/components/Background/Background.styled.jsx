@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 export const StyledBackground = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(
-    ${(props) => props.theme.colors.StyledBackground.softViolet},
-    ${(props) => props.theme.colors.StyledBackground.softBlue}
+    ${({ theme }) => theme.colors.softViolet},
+    ${({ theme }) => theme.colors.softBlue}
   );
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 `;

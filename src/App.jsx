@@ -1,13 +1,12 @@
 import GlobalStyle from './GLobalStyles';
 import Theme from './Theme';
 
-import Test from './components/Test';
-
+import FaqCard from './components/FaqCard/FaqCard';
 function App() {
   return (
     <Theme>
       <GlobalStyle />
-      <Test />
+      <FaqCard />
     </Theme>
   );
 }

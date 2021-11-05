@@ -1,7 +1,7 @@
 import { StyledBackground } from './Background.styled';
 
-const Background = () => {
+const Container = () => {
   return <StyledBackground></StyledBackground>;
 };
 
-export default Background;
+export default Container;
