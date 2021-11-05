@@ -1,12 +1,12 @@
-import WomanOnlineDesktop from '../Illustration/WomanOnlineDesktop';
-import Shadow from '../Illustration/Shadow';
+import AccordionBody from './FaqContent/AccordionBody';
 import BoxDesktop from '../Illustration/BoxDesktop';
+import FaqContent from './FaqContent/FaqContent';
+import FaqIllustrations from '../Illustration/FaqIllustrations';
 import {
-  StyledFaqCard,
   StyledFaqs,
-  StyledIlustrations,
-  StyledWomanOnlineDesktopDiv,
-  StyledShadowDiv,
+  StyledFaqCard,
+  StyledFaqHeading,
+  SyledFaqSection,
 } from './FaqCard.styled';
 import { StyledBackground } from '../Background/Background.styled';
 
@@ -15,16 +15,17 @@ const FaqCard = () => {
     <StyledBackground>
       <BoxDesktop />
       <StyledFaqCard>
-        <StyledIlustrations>
-          <StyledWomanOnlineDesktopDiv>
-            <WomanOnlineDesktop />
-          </StyledWomanOnlineDesktopDiv>
-          <StyledShadowDiv>
-            <Shadow />
-          </StyledShadowDiv>
-        </StyledIlustrations>
+        <FaqIllustrations />
         <StyledFaqs>
-          <h1>Test</h1>
+          <StyledFaqHeading>FAQ</StyledFaqHeading>
+          <SyledFaqSection>
+            <FaqContent>How many team members can I invite?</FaqContent>
+            <AccordionBody>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+              rem voluptas, repellat molestias earum voluptatum fugit
+              exercitationem!
+            </AccordionBody>
+          </SyledFaqSection>
         </StyledFaqs>
       </StyledFaqCard>
     </StyledBackground>
