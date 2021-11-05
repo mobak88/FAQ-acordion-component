@@ -1,4 +1,4 @@
-import GlobalStyle from './GLobalStyles';
+import GlobalStyle from './GlobalStyles';
 import Theme from './Theme';
 
 import FaqCard from './components/FaqCard/FaqCard';
