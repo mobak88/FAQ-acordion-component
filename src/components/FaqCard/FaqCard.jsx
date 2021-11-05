@@ -1,13 +1,24 @@
-import { StyledFaqCard } from './FaqCard.styled';
-import Container from '../Background/Container';
+import WomanOnlineDesktop from '../Illustration/WomanOnlineDesktop';
+import Shadow from '../Illustration/Shadow';
+import {
+  StyledFaqCard,
+  StyledFaqs,
+  StyledIlustrations,
+} from './FaqCard.styled';
+import { StyledBackground } from '../Background/Background.styled';
 
 const FaqCard = () => {
   return (
-    <Container>
+    <StyledBackground>
       <StyledFaqCard>
-        <h1>Test</h1>
+        <StyledIlustrations>
+          <Shadow />
+        </StyledIlustrations>
+        <StyledFaqs>
+          <h1>Test</h1>
+        </StyledFaqs>
       </StyledFaqCard>
-    </Container>
+    </StyledBackground>
   );
 };
 
