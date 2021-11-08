@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ArrowDown from '../../Illustration/ArrowDown';
 import {
   SyledFaqSection,
@@ -9,7 +7,7 @@ import {
 
 const FaqHeading = (props) => {
   return (
-    <SyledFaqSection>
+    <SyledFaqSection onClick={props.toggleClick}>
       <SyledFaqSectionHeading>
         <StyledFaqparagrapgh>{props.children}</StyledFaqparagrapgh>
         <ArrowDown />
@@ -19,30 +17,3 @@ const FaqHeading = (props) => {
 };
 
 export default FaqHeading;
-
-{
-  /* <SyledFaqSection>
-            <StyledFaqparagrapgh>
-              What is the maximum file upload size?
-            </StyledFaqparagrapgh>
-            <ArrowDown />
-          </SyledFaqSection>
-          <SyledFaqSection>
-            <StyledFaqparagrapgh>
-              How do I reset my password?
-            </StyledFaqparagrapgh>
-            <ArrowDown />
-          </SyledFaqSection>
-          <SyledFaqSection>
-            <StyledFaqparagrapgh>
-              Can I cancel my subscription?
-            </StyledFaqparagrapgh>
-            <ArrowDown />
-          </SyledFaqSection>
-          <SyledFaqSection>
-            <StyledFaqparagrapgh>
-              Do you provide additional support?
-            </StyledFaqparagrapgh>
-            <ArrowDown />
-          </SyledFaqSection> */
-}

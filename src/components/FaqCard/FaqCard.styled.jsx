@@ -17,7 +17,7 @@ export const StyledFaqs = styled.div`
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin: 4rem 0 0 0;
+  margin: 3rem 0 0 0;
 `;
 
 export const StyledIlustrations = styled.div`
@@ -33,7 +33,7 @@ export const StyledWomanOnlineDesktopDiv = styled.div`
 
 export const StyledShadowDiv = styled.div`
   position: absolute;
-  left: -50%;
+  left: -51%;
   top: -50%;
 `;
 
@@ -66,7 +66,6 @@ export const SyledFaqSection = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding: 0.8rem 0;
 `;
 
 export const SyledFaqSectionHeading = styled.div`
@@ -75,10 +74,10 @@ export const SyledFaqSectionHeading = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrayishBlue};
-  padding: 0.8rem 0;
 `;
 
 export const StyledFaqparagrapgh = styled.p`
   font-size: 1rem;
+  padding: 0.5rem 0 0.8rem 0;
   color: ${({ theme }) => theme.colors.veryDarkGrayishBlue};
 `;
