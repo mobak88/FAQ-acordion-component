@@ -78,6 +78,6 @@ export const SyledFaqSectionHeading = styled.div`
 
 export const StyledFaqparagrapgh = styled.p`
   font-size: 1rem;
-  padding: 0.5rem 0 0.8rem 0;
+  padding: 1.4rem 0 1.4rem 0;
   color: ${({ theme }) => theme.colors.veryDarkGrayishBlue};
 `;

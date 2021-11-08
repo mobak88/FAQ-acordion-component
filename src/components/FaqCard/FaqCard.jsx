@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import AccordionBody from './FaqContent/AccordionBody';
 import BoxDesktop from '../Illustration/BoxDesktop';
-import FaqHeading from './FaqContent/FaqContent';
+import FaqHeading from './FaqContent/FaqHeading';
 import FaqIllustrations from '../Illustration/FaqIllustrations';
 import { StyledFaqs, StyledFaqCard, StyledFaqHeading } from './FaqCard.styled';
 import { StyledBackground } from '../Background/Background.styled';
@@ -12,8 +12,10 @@ const FaqCard = () => {
   const [clicked, setClicked] = useState(false);
 
   const toggleClick = (index) => {
-    if (clicked === index) setClicked(null);
-
+    if (clicked === index) {
+      setClicked(null);
+      console.log(index);
+    }
     setClicked(index);
   };
 
@@ -27,7 +29,7 @@ const FaqCard = () => {
           {FaqText.map((item, index) => {
             return (
               <>
-                <FaqHeading onClick={() => toggleClick(index)} key={index}>
+                <FaqHeading toggleClick={() => toggleClick(index)} key={index}>
                   {item.question}
                 </FaqHeading>
                 {clicked === index ? (
