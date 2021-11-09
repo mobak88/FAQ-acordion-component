@@ -2,14 +2,14 @@ import ArrowDown from '../../Illustration/ArrowDown';
 import {
   SyledFaqSection,
   SyledFaqSectionHeading,
-  StyledFaqparagrapgh,
+  StyledFaqButton,
 } from '../FaqCard.styled';
 
 const FaqHeading = (props) => {
   return (
-    <SyledFaqSection onClick={props.toggleClick}>
+    <SyledFaqSection onClick={props.callToggles}>
       <SyledFaqSectionHeading>
-        <StyledFaqparagrapgh>{props.children}</StyledFaqparagrapgh>
+        <StyledFaqButton>{props.children}</StyledFaqButton>
         <ArrowDown />
       </SyledFaqSectionHeading>
     </SyledFaqSection>

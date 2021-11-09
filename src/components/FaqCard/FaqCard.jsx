@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import AccordionBody from './FaqContent/AccordionBody';
 import BoxDesktop from '../Illustration/BoxDesktop';
@@ -10,13 +10,25 @@ import { FaqText } from './FaqContent/FaqText';
 
 const FaqCard = () => {
   const [clicked, setClicked] = useState(false);
+  const [active, setActive] = useState(false);
 
   const toggleClick = (index) => {
     if (clicked === index) {
       setClicked(null);
-      console.log(index);
     }
     setClicked(index);
+  };
+
+  const toggleActive = (index) => {
+    if (active === index) {
+      setClicked(false);
+    }
+    setActive(true);
+  };
+
+  const callToggles = (index) => {
+    toggleActive(index);
+    toggleClick(index);
   };
 
   return (
@@ -28,14 +40,14 @@ const FaqCard = () => {
           <StyledFaqHeading>FAQ</StyledFaqHeading>
           {FaqText.map((item, index) => {
             return (
-              <>
-                <FaqHeading toggleClick={() => toggleClick(index)} key={index}>
+              <React.Fragment key={item.question}>
+                <FaqHeading callToggles={() => callToggles(index)}>
                   {item.question}
                 </FaqHeading>
                 {clicked === index ? (
                   <AccordionBody>{item.answer}</AccordionBody>
                 ) : null}
-              </>
+              </React.Fragment>
             );
           })}
         </StyledFaqs>

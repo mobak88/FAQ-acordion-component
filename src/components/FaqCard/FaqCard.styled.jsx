@@ -66,6 +66,7 @@ export const SyledFaqSection = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  cursor: pointer;
 `;
 
 export const SyledFaqSectionHeading = styled.div`
@@ -76,8 +77,17 @@ export const SyledFaqSectionHeading = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrayishBlue};
 `;
 
-export const StyledFaqparagrapgh = styled.p`
+export const StyledFaqButton = styled.button`
   font-size: 1rem;
   padding: 1.4rem 0 1.4rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: ease-in-out color 200ms;
   color: ${({ theme }) => theme.colors.veryDarkGrayishBlue};
+  font-weight: ${(active) => (active ? '' : 700)};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.softRed};
+  }
 `;
