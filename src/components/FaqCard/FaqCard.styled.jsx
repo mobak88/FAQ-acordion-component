@@ -85,7 +85,7 @@ export const StyledFaqButton = styled.button`
   cursor: pointer;
   transition: ease-in-out color 200ms;
   color: ${({ theme }) => theme.colors.veryDarkGrayishBlue};
-  font-weight: ${(active) => (active ? '' : 700)};
+  font-weight: ${({ active }) => (active ? 700 : '')};
 
   &:hover {
     color: ${({ theme }) => theme.colors.softRed};

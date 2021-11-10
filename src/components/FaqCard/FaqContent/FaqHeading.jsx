@@ -7,9 +7,11 @@ import {
 
 const FaqHeading = (props) => {
   return (
-    <SyledFaqSection onClick={props.callToggles}>
+    <SyledFaqSection onClick={props.toggleClick}>
       <SyledFaqSectionHeading>
-        <StyledFaqButton>{props.children}</StyledFaqButton>
+        <StyledFaqButton active={props.active}>
+          {props.children}
+        </StyledFaqButton>
         <ArrowDown />
       </SyledFaqSectionHeading>
     </SyledFaqSection>

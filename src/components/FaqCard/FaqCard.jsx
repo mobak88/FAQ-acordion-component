@@ -9,26 +9,14 @@ import { StyledBackground } from '../Background/Background.styled';
 import { FaqText } from './FaqContent/FaqText';
 
 const FaqCard = () => {
-  const [clicked, setClicked] = useState(false);
-  const [active, setActive] = useState(false);
+  const [clicked, setClicked] = useState([]);
 
   const toggleClick = (index) => {
-    if (clicked === index) {
-      setClicked(null);
+    if (clicked.includes(index)) {
+      setClicked((clicked) => clicked.filter((el) => el !== index));
+    } else {
+      setClicked((clicked) => [...clicked, index]);
     }
-    setClicked(index);
-  };
-
-  const toggleActive = (index) => {
-    if (active === index) {
-      setClicked(false);
-    }
-    setActive(true);
-  };
-
-  const callToggles = (index) => {
-    toggleActive(index);
-    toggleClick(index);
   };
 
   return (
@@ -41,12 +29,15 @@ const FaqCard = () => {
           {FaqText.map((item, index) => {
             return (
               <React.Fragment key={item.question}>
-                <FaqHeading callToggles={() => callToggles(index)}>
+                <FaqHeading
+                  toggleClick={() => toggleClick(index)}
+                  active={clicked.includes(index)}
+                >
                   {item.question}
                 </FaqHeading>
-                {clicked === index ? (
+                {clicked.includes(index) && (
                   <AccordionBody>{item.answer}</AccordionBody>
-                ) : null}
+                )}
               </React.Fragment>
             );
           })}
